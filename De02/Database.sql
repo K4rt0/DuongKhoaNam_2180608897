@@ -1,0 +1,25 @@
+﻿CREATE DATABASE QLSanPham
+GO
+USE QLSanPham
+GO
+CREATE TABLE LoaiSP(
+	MaLoai CHAR(2) PRIMARY KEY,
+	TenLoai NVARCHAR(30) NOT NULL
+)
+GO
+CREATE TABLE SanPham(
+	MaSP CHAR(6) PRIMARY KEY,
+	TenSP NVARCHAR(30) NOT NULL,
+	NgayNhap DateTime,
+	MaLoai CHAR(2) NOT NULL FOREIGN KEY REFERENCES LoaiSP(MaLoai)
+)
+GO
+INSERT INTO LoaiSP (MaLoai, TenLoai) VALUES ('01', N'Thực phẩm')
+GO
+INSERT INTO LoaiSP (MaLoai, TenLoai) VALUES ('02', N'Nước uống')
+GO
+INSERT INTO SanPham (MASP, TenSP, NgayNhap, MaLoai) VALUES ('TP0001', N'Bánh snack', '11/11/2023', '01')
+GO
+INSERT INTO SanPham (MASP, TenSP, NgayNhap, MaLoai) VALUES ('TP0002', N'Kẹo mút', '11/11/2023', '01')
+GO
+INSERT INTO SanPham (MASP, TenSP, NgayNhap, MaLoai) VALUES ('NU0001', N'Cocacola', '11/11/2023', '02')

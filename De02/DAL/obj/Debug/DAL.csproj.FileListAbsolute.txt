@@ -1,0 +1,12 @@
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\bin\Debug\DAL.dll.config
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\bin\Debug\DAL.dll
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\bin\Debug\DAL.pdb
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\bin\Debug\EntityFramework.dll
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\bin\Debug\EntityFramework.xml
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\obj\Debug\DAL.dll
+C:\Users\K4rt0\Desktop\DuongKhoaNam_2180608897\De02\DAL\obj\Debug\DAL.pdb
