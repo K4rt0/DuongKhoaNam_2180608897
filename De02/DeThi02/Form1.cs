@@ -142,12 +142,22 @@ namespace DeThi02
 				e.Cancel = true;
 		}
 
-		private void txtSearch_TextChanged(object sender, EventArgs e)
+		private void btnSearch_Click(object sender, EventArgs e)
 		{
 			ProductModel context = new ProductModel();
-			List<SanPham> listProducts = context.SanPham.Where(p => p.TenSP == txtSearch.Text).ToList();
-			if(listProducts.Count)
-			loadProduct(listProducts);
+			List<SanPham> listProducts = context.SanPham.Where(p => p.MaSP == txtSearch.Text).ToList();
+			if (listProducts.Count == 0)
+				MessageBox.Show("Không có sản phẩm nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
+			else
+				loadProduct(listProducts);
+		}
+
+		private void txtSearch_TextChanged(object sender, EventArgs e)
+		{
+			if(txtSearch.Text == "")
+			{
+				loadProduct(productService.GetAll());
+			}
 		}
 	}
 }
