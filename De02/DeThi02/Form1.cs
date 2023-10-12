@@ -67,18 +67,15 @@ namespace DeThi02
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			if (txtID.Text == "" || txtName.Text == "" || cmbType.Text == "")
-			{
-
 				MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi thao tác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-			}
+			else if(txtID.Text.Length > 6)
+				MessageBox.Show("Mã của sản phẩm không được vượt quá 6 kí tự.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			else
 			{
 				ProductModel context = new ProductModel();
-				LoaiSP selectedProductType = context.LoaiSP.FirstOrDefault(p => p.TenLoai == cmbType.Text);
-				SanPham product = new SanPham() { MaSP = txtID.Text, TenSP = txtName.Text, NgayNhap = dtpDate.Value, MaLoai = selectedProductType.MaLoai };
-				SanPham checkProduct = context.SanPham.FirstOrDefault(p => p.MaSP == txtID.Text);
+				SanPham product = new SanPham() { MaSP = txtID.Text, TenSP = txtName.Text, NgayNhap = dtpDate.Value, MaLoai = context.LoaiSP.FirstOrDefault(p => p.TenLoai == cmbType.Text).MaLoai };
 
-				if (checkProduct != null)
+				if (context.SanPham.FirstOrDefault(p => p.MaSP == txtID.Text) != null)
 					MessageBox.Show("Mã sản phẩm này đã tồn tại vui lòng kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				else
 				{
